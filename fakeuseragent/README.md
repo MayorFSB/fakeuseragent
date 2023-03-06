@@ -1,4 +1,4 @@
-# fakeagent
+# fakeuseragent
 Repository fix [fake-useragent](https://github.com/fake-useragent/) for windows.
 
 Up-to-date simple useragent faker with real world database.
@@ -11,8 +11,8 @@ Up-to-date simple useragent faker with real world database.
 ### Usage
 
 ```py
-import fakeagent
-fa = fakeagent.UserAgent()
+import fakeuseragent
+fa = fakeuseragent.UserAgent()
 
 fa.random
 #Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; Wanadoo 5.6)
@@ -37,13 +37,13 @@ fa.internetexplorer
 fa.opera
 #Mozilla/4.0 (compatible; MSIE 5.0; Linux 2.4.4-4GB i686) Opera 5.0  [en]
 ```
-By default `fakeagent` will use it's local ([`browsers.json`](./fakeagent/browsers.json)) data file as the data source.
+By default `fakeuseragent` will use it's local ([`browsers.json`](./browsers.json)) data file as the data source.
 
 If you don't want to use the local data, but use the external data source to retrieve the user-agents. Set `use_external_data` to `True`:
 
 ```py
-from fakeagent import UserAgent
-file_path = 'C:\\Users\\test\\fakeagent\\Data\\browsers.json'
+from fakeuseragent import UserAgent
+file_path = 'C:\\test\\fakeuseragent\\Data\\browsers.json'
 fa = UserAgent(use_external_data=True, cache_path=file_path)
 fa.random
 #Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; Media Center PC 6.0; InfoPath.2; MS-RTC LM 8
