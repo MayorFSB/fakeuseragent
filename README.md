@@ -44,7 +44,7 @@ If you don't want to use the local data, but use the external data source to ret
 
 ```py
 from fakeuseragent import UserAgent
-file_path = 'C:\\test\\fakeuseragent\\Data\\browsers.json'
+file_path = 'C:\\test\\fakeuseragent\\browsers.json'
 fa = UserAgent(use_external_data=True, cache_path=file_path)
 fa.random
 #Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; Media Center PC 6.0; InfoPath.2; MS-RTC LM 8
