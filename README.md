@@ -3,6 +3,12 @@ Repository fix [fake-useragent](https://github.com/fake-useragent/) for windows.
 
 Up-to-date simple useragent faker with real world database.
 
+## Install
+
+```py
+git clone https://github.com/MayorFSB/fakeuseragent.git
+```
+
 ## Features
 
 - Data is pre-downloaded from [useragentstring.com](http://useragentstring.com/) and part of the package
