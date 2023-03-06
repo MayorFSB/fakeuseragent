@@ -72,7 +72,7 @@ def get_browser_user_agents_online(browser, verify_ssl=True):
     html = html.split("</div>")[0]
     pattern = r"<a href=\'/.*?>(.+?)</a>"
     browsers_iter = re.finditer(pattern, html, re.UNICODE)
-    # All useragents here
+    # All user agents here
     browsers = []
 
     for browser in browsers_iter:
@@ -105,8 +105,7 @@ def load(browsers, use_local_file=True, verify_ssl=True):
             logger.warning(
                 "Unable to find local data/json file or could not parse the contents using importlib-resources. "
                 "Try pkg-resource next.",
-                exc_info=exc
-                            )
+                exc_info=exc)
             try:
                 with open(resource_filename("fakeuseragent", "browsers.json")) as file:
                     json_lines = file.read()
@@ -120,8 +119,7 @@ def load(browsers, use_local_file=True, verify_ssl=True):
                 logger.warning(
                     "Could not find local data/json file or could not parse the contents using pkg-resource. "
                     "Fallback to external resource.",
-                    exc_info=exc2
-                            )
+                    exc_info=exc2)
 
     # Fallback behaviour or use_external_data parameter is explicitly set to True
     if fetch_online:
